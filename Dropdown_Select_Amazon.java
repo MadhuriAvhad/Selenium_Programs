@@ -1,5 +1,7 @@
 package selenium_Basic_Programs;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -17,6 +19,8 @@ public class Dropdown_Select_Amazon {
 		WebElement searchInDrop = driver.findElement(By.xpath("//select[@id='searchDropdownBox']"));
 		Select dropdown = new Select(searchInDrop);
 		dropdown.selectByVisibleText("Watches");
+		List<WebElement> dropdownOptions = dropdown.getOptions();
+		System.out.println(dropdownOptions.size());
 		
 	}
 

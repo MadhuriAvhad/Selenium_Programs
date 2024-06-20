@@ -21,7 +21,7 @@ public class GetWindowHandles_AddToWishList_Login_AddToCart_BuyNow_Amazon {
 		Thread.sleep(2000);
 		List<WebElement> search_results = driver.findElements(By.xpath("//div[@class='two-pane-results-container']/div/div"));
 		int search_count = search_results.size();
-		System.out.println("Search Count -> "+search_count);
+		System.out.println("Search Count -> "+ search_count);
 		search_results.get(5).click();
 		
 		List<WebElement> result_options = driver.findElements(By.xpath("//a[@class='a-link-normal s-no-outline']"));
